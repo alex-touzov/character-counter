@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Character Counter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <div>
+        <h1>Character Counter</h1>
+      </div>
+      <div class="header-actions">
+        <label class="toggle" aria-label="Toggle dark mode">
+          <input type="checkbox" id="themeToggle">
+          <span class="toggle__label">Dark mode</span>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </header>
+
+    <section class="stats" aria-live="polite">
+      <article class="stat-card">
+        <p class="label">Characters</p>
+        <p class="value" id="charCount">0</p>
+        <p class="details">All characters, including spaces and punctuation.</p>
+      </article>
+      <article class="stat-card">
+        <p class="label">Words</p>
+        <p class="value" id="wordCount">0</p>
+        <p class="details">Alphanumeric strings over 2 characters.</p>
+      </article>
+      <article class="stat-card">
+        <p class="label">Tokens</p>
+        <p class="value" id="tokenCount">0</p>
+        <p class="details">Approximate LLM tokens at 4 characters per token.</p>
+      </article>
+    </section>
+
+    
+    <textarea id="textInput" placeholder="Start typing or paste your text here..."></textarea>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
